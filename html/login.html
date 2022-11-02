@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/login.css">
+    <script src="https://kit.fontawesome.com/f2bbe33073.js" crossorigin="anonymous"></script>
+
+    <title>Login-Laced</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header" id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="/html/contato.html"><i class="fa-solid fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <a  class="divLogo" href="/index.html">
+            <img class="logo" src="/imagens/laced.png" alt="">
+        </a>
+        <div class='container'>
+            <div class='card'>
+
+                <div class="logoL">
+                    <a href="/index.html"><img class="logoLaced" src="/imagens/laced.png" width="150px" alt=""></a>
+                </div>
+                <div class='label-float'>
+                    <input type='text' id='usuario' paceholder='' required>
+                    <label id='userLabel' for='usuario'>Nº de matricula:</label>
+                </div>
+
+                <div class='label-float'>
+                    <input type='password' id='senha' paceholder='' required>
+                    <label id='senhaLabel' for='senha'>Senha:</label>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+
+                <div class='justify-center'>
+                    <a class="button" href="/html/problemas.html">
+                        <div class="svg-wrapper-1">
+                          <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Enviar</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© Laced 2022. Direitos reservados</p>
+    </footer>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

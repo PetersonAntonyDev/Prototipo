@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/problema.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f2bbe33073.js" crossorigin="anonymous"></script>
+    <title>Runs - Laced</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header" id="nav">
+            <div class="logoHeader">
+                <a href="/index.html"><img class="logoHeader" src="/imagens/laced.png" alt=""></a>
+            </div>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="/html/problemas.html"><i class="fa-solid fa-arrow-left"></i>Voltar</a></li>
+                <li><a href="/html/contato.html"><i class="fa-solid fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="inputs">
+                <h3>Run:</h3>
+                <div class="divInput">
+                    <label for="problemas">Problemas:</label>
+                    <select id="problema" name="problema">
+                        <option value="BubbleSort">BubbleSort</option>
+                        <option value="Quicksort">Quicksort</option>
+                        <option value="Grafos">Grafos</option>
+                        <option value="Grafos">InsertionSort</option>
+                        <option value="Jogo da velha">Jogo da velha</option>
+                        <option value="MergeSort">MergeSort</option>
+                    </select>
+                </div>
+                <div class="divInput">
+                    <label for="linguagem">Linguagem:</label>
+                    <select name="linguagem" id="linguagem">
+                        <option value="python">Python3</option>
+                        <option value="java">Java</option>
+                        <option value="PHP">PHP</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+
+                <button class="download-button">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Enviar</div>
+                    <div class="download">
+                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line></svg>
+                    </div>
+                  </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© Laced 2022. Direitos reservados</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

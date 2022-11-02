@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.logoHeader {
+    width: 120px;
+    height: 40px;
+}
+
+.logoOpaca {
+    position: absolute;
+    opacity: 0.1;
+    width: 800px;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%);
+}
+
+nav {
+    border-bottom: 1px solid #006718;
+    display: flex;
+    margin: 10px 0;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 45px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #006718;
+    transform: translateY(-2px);
+}
+
+nav .menu-btn {
+    color: #006718;
+    cursor: pointer;
+    display: none;
+}
+
+/*mobile*/
+#btn-mobile {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    main {
+        margin-top: 20vh;
+    }
+
+    nav .logoHeader {
+        margin-left: -40px;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        right: 0px;
+        background: #fff;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+
+
+    nav ul li {
+        padding: 20px 0;
+        margin: 10px 0;
+        border-bottom: #c7c8c9 1px solid;
+    }
+
+    nav ul li a {
+        color: #006718;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 300;
+        border-radius: 45px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        transform: translateY(-2px);
+    }
+
+    #btn-mobile {
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        background: none;
+        cursor: pointer;
+        
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 30px;
+        color: #006718;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 10px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -12px;
+    }
+
+    .logoOpaca {
+        display: none;
+    }
+
+    .divParceiro {
+        margin-top: 25vh !important;
+    }
+
+    footer {
+        margin-top: 30vh;
+    }
+}
+
+/*carousel*/
+
+.imageCard {
+    width: 250px;
+    height: 170px;
+}
+
+.carousel-wrapper {
+    margin-top: 5%;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    height: 100%;
+    position: relative;
+    padding: 0 0 0 50px;
+    left: 0;
+    margin: 0;
+    transition: all 1s;
+}
+
+.carousel-inner .item { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    float: left;
+    list-style: none;
+    padding: 50px;
+    margin: 0 50px 0 0;
+}
+
+
+
+.carousel-left,
+.carousel-right {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.carousel-left:before,
+.carousel-right:before {
+    content: "";
+    background: #006718;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+}
+
+.carousel-left:hover:before,
+.carousel-right:hover:before {
+    opacity: 0.8;
+}
+
+.carousel-left {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    font-size: 2rem;
+    color: #006718;
+    background-color: transparent;
+
+}
+
+.carousel-right {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    right: 0;
+    font-size: 2rem;
+    color: #006718;
+    background-color: transparent;
+}
+
+.carousel-left:hover, .carousel-right:hover {
+    color: #000;
+}
+
+/*Demo styles*/
+
+.carousel-wrapper {
+    background-color: transparent;
+    padding: 30px 0;
+}
+
+.carousel-inner .item {
+    backdrop-filter: blur(0px) saturate(200%);
+    -webkit-backdrop-filter: blur(0px) saturate(200%);
+    background-color: rgba(0, 103, 24, 0.75);
+    
+    border-radius: 0 15px 0 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 1em 2em;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.carousel-inner .item:hover {
+    -webkit-box-shadow: 2px 10px 22px 1px rgba(0, 103, 24, 1);
+    -moz-box-shadow: 2px 10px 22px 1px rgba(0, 103, 24, 1);
+    box-shadow: 2px 10px 22px 1px rgba(0, 103, 24, 1);
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.carousel-left:before,
+.carousel-right:before {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    
+}
+
+.divParceiro {
+    margin: 10vh 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logoIfpb {
+    width: 130px;
+    height: 150px;
+    
+}
+
+h3 {
+    text-align: center;
+}
+
+/* footer */ 
+
+footer {
+    text-align: center;
+    color: #006718;
+}
+
+.card2 {
+    width: 300px;
+    height: 300px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
